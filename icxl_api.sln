@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30413.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test-icxl", "Test-icxl", "{0D22B488-A390-48FC-B42C-2CBB5F40F912}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Microservice", "Microservice", "{0E96B9E9-57A6-4A08-8711-A0317AEB4B5A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core3", "Core3", "{E3E12EA0-2353-47F7-878E-082116B1BD4C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "grpcServer", "grpcServer\grpcServer.csproj", "{27939765-0C04-44CE-AC8B-EC9C87C096BC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "grpcclient", "grpcclient\grpcclient.csproj", "{C1392F2F-23F2-4A60-9E9D-A8B0FE65A5A4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{27939765-0C04-44CE-AC8B-EC9C87C096BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27939765-0C04-44CE-AC8B-EC9C87C096BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27939765-0C04-44CE-AC8B-EC9C87C096BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27939765-0C04-44CE-AC8B-EC9C87C096BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1392F2F-23F2-4A60-9E9D-A8B0FE65A5A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1392F2F-23F2-4A60-9E9D-A8B0FE65A5A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1392F2F-23F2-4A60-9E9D-A8B0FE65A5A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1392F2F-23F2-4A60-9E9D-A8B0FE65A5A4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E3E12EA0-2353-47F7-878E-082116B1BD4C} = {0E96B9E9-57A6-4A08-8711-A0317AEB4B5A}
+		{27939765-0C04-44CE-AC8B-EC9C87C096BC} = {E3E12EA0-2353-47F7-878E-082116B1BD4C}
+		{C1392F2F-23F2-4A60-9E9D-A8B0FE65A5A4} = {0D22B488-A390-48FC-B42C-2CBB5F40F912}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A8D86CB2-D606-455C-80E7-45924F028317}
+	EndGlobalSection
+EndGlobal
