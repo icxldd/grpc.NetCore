@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace grpcServer.Servers
 {
+    [Authorize]
     public class GreeterService : Greeter.GreeterBase
     {
         public override Task<HelloReply> SayHello(

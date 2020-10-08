@@ -27,7 +27,16 @@ namespace grpcServer
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc(option => option.EnableEndpointRouting = false);
-            services.AddMvcCore();
+            services.AddMvcCore().AddAuthorization();
+
+            services.AddAuthentication("Bearer")
+          .AddJwtBearer("Bearer", options =>
+          {
+              options.Authority = "http://" + "192.168.31.114" + ":" + "5000";
+              options.RequireHttpsMetadata = false;
+              options.Audience = "api1";
+          });
+
             services.AddGrpc();
             services.AddGrpcReflection();
         }
@@ -35,6 +44,7 @@ namespace grpcServer
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            app.UseAuthentication();
             app.UseStatusCodePages();
 
             if (env.IsDevelopment())
@@ -43,7 +53,10 @@ namespace grpcServer
             }
             app.UseHttpsRedirection();
             app.UseMvc();
+           
+
             app.UseRouting();
+            app.UseAuthorization();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapGrpcService<GreeterService>();
